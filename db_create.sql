@@ -1,7 +1,7 @@
 # Please use this file to create your table in database CSIT314
 DROP TABLE IF EXISTS `CSIT314`.`ITEMS`;
 CREATE TABLE IF NOT EXISTS `CSIT314`.`ITEMS` (`NAME` varchar(60), `TYPE` varchar(12), `CODE` varchar(14), `SELLING_PRICE` varchar(13), `QUANTITY` varchar(8), `SALECOUNT` varchar(9), `TOTALSALE` varchar(9), `COST_PRICE` varchar(10), `PROFIT` varchar(6)) DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
-INSERT INTO `CSIT314`.`ITEMS` (`NAME`, `TYPE`, `CODE`, `SELLING_PRICE`, `QUANTITY`, `SALECOUNT`, `TOTALSALE`, `COST_PRICE`, `PROFIT`) VALUES ('ME', 'TYPE', 'CODE', 'SELLING PRICE', 'QUANTITY', 'SALECOUNT', 'TOTALSALE', 'COST PRICE', 'PROFIT'),
+INSERT INTO `CSIT314`.`ITEMS` (`NAME`, `TYPE`, `CODE`, `SELLING_PRICE`, `QUANTITY`, `SALECOUNT`, `TOTALSALE`, `COST_PRICE`, `PROFIT`) VALUES 
  ('Apple MacBook Pro 15\" with Touch Bar 512GB (Space Grey)', 'Laptop', 'MLH42X/A', '4247', '30', '68', '288796', '3295', '952'),
  ('Apple MacBook Pro 15\" with Touch Bar 256GB (Space Grey)', 'Laptop', 'MLH32X/A', '3597', '99', '7', '25179', '2848', '749'),
  ('Apple iMac with Retina 5K display 27\" 3.3GHz', 'Laptop', 'MK482X/A', '3594', '0', '75', '269550', '2617', '977'),
