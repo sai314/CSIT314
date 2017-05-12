@@ -25,3 +25,50 @@ function executeQuery($conn, $query, $facet) {
 }
 
 ?>
+
+
+<?php
+	
+	function total_number_sales()
+	{
+		echo '<br/>';echo '<br/>';
+		$con = @new mysqli ("localhost", "root", "", "csit314");
+		if ($con->connect_errno > 0) {
+			echo "DB Connection failed: " . $con->connect_error;
+			die ();
+		}
+		$query1 = "select sum(SALECOUNT) from items";  
+		$result = $con->query ($query1);
+		
+		if (!$result)
+			die ("Unable to query DB"). $con->connect_error; 
+		
+		//print_r ($result);
+		return $result->fetch_row()[0];
+	}
+	
+	
+	
+	function profit_store()
+	{
+		echo '<br/>';echo '<br/>';
+		$con = @new mysqli ("localhost", "root", "", "csit314");
+		if ($con->connect_errno > 0) {
+			echo "DB Connection failed: " . $con->connect_error;
+			die ();
+		}
+
+		$query1 = "select sum(TOTALSALE) from items";  
+		$result = $con->query ($query1);
+		
+		if (!$result)
+			die ("Unable to query DB"). $con->connect_error; 
+		
+		//print_r ($result);
+		return $result->fetch_row()[0];
+	}
+	
+	
+	echo total_number_sales();
+	echo profit_store();
+?>
